@@ -1,0 +1,35 @@
+// Se i opgaven C:\Marianne\Eksamensprojekter og EKSAMEN\Webudvikler - hovedforløb\Viborg Haveservice\Viborg Haveservice\HTML & CSS (Bliver ikke udleveret)\index.html
+// FONT
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap");
+
+// Farver fra coolors
+$primary: #2b2d42ff;
+$secondary: #e86a92ff;
+$danger: #f7e733ff;
+$warning: rgb(97, 97, 196);
+$success: #41e2baff;
+
+// Fontfamily https://getbootstrap.com/docs/5.0/content/reboot/#native-font-stack
+// C:\Marianne\Eksamensprojekter og EKSAMEN\Webudvikler - hovedforløb\Viborg Haveservice\Viborg Haveservice\HTML & CSS (Bliver ikke udleveret)\css\style.css
+$font-family-base: "Open Sans", sans-serif;
+
+// https://getbootstrap.com/docs/5.0/components/navbar/#variables
+$navbar-dark-color: rgba(white, 0.95);
+$navbar-dark-hover-color: rgba(white, 1);
+
+// tilføj en farve til theme-colors - ved at lave et map selv og merge det med BS theme-colors
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+
+// Tjek evt. C:\Marianne\asp.net\_AVANCERET_CSS\2024januar\oevelse\bsoevelse\scss\styles.scss
+$theme-colors: map-merge(
+	$theme-colors,
+	(
+		"vh-green": #6aaf09,
+	)
+);
+
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+// import mystyles
+@import "./style";
